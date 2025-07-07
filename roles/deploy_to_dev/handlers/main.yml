@@ -1,1 +1,2 @@
-
+- name: restart tomcat
+  shell: "nohup {{ tomcat_home }}/bin/startup.sh &"
