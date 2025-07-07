@@ -1,1 +1,5 @@
+- name: Copy WAR to DEV
+  copy:
+    src: "{{ project_dir }}/target/{{ war_file }}"
+    dest: /tmp/{{ war_file }}
 
