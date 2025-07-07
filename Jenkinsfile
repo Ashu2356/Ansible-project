@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Java Project') {
             steps {
                 sh '''
-                    git clone https://github.com/Ashu2356/Ansible-project.git project
+                    git clone https://github.com/Ashu2356/project.git project
                 '''
             }
         }
