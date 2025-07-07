@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Java Project') {
             steps {
                 sh '''
-                    git clone https://github.com/Ashu2356/project.git 
+                    git clone https://github.com/Shantanumajan6/project.git
                 '''
             }
         }
