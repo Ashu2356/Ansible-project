@@ -1,1 +1,4 @@
-
+- name: Copy WAR to QA
+  copy:
+    src: "{{ project_dir }}/target/{{ war_file }}"
+    dest: /tmp/{{ war_file }}
