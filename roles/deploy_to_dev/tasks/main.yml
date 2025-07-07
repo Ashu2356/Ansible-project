@@ -1,1 +1,11 @@
+- name: Stop Tomcat
+  shell: "{{ tomcat_home }}/bin/shutdown.sh || true"
+  notify: restart tomcat
+
+- name: Deploy WAR to DEV
+  copy:
+    src: /tmp/{{ war_file }}
+    dest: "{{ tomcat_home }}/webapps/{{ war_file }}"
+    remote_src: yes
+    mode: '0644'
 
