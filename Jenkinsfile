@@ -11,7 +11,7 @@ pipeline {
         stage('Run Ansible') {
             steps {
                 sh '''
-                    cd ansible
+                    cd /etc/ansible
                     ansible-playbook -i inventory/dev site.yml
                     ansible-playbook -i inventory/qa site.yml
                 '''
