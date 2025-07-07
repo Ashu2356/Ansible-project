@@ -1,1 +1,25 @@
 
+- name: Build WAR
+  hosts: localhost
+  vars_files:
+    - vars.yml
+  roles:
+    - build_war
+
+- name: Copy to DEV
+  hosts: dev
+  become: true
+  vars_files:
+    - group_vars/dev.yml
+  roles:
+    - copy_to_dev
+    - deploy_to_dev
+
+- name: Copy to QA
+  hosts: qa
+  become: true
+  vars_files:
+    - group_vars/qa.yml
+  roles:
+    - copy_to_qa
+    - deploy_to_qa
