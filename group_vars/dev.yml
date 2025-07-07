@@ -1,2 +1,2 @@
-tomcat_home: /mnt/server/tomcat
+tomcat_home: /mnt/server/apache-tomcat-10.1.43
 war_file: LoginWebApp.war
