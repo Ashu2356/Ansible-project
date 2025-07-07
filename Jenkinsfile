@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
                     rm -rf project 
-                    git clone https://github.com/Shantanumajan6/project.git
+                    git clone https://github.com/Ashu2356/project.git
                 '''
             }
         }
